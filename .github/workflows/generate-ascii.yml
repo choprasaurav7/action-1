@@ -6,7 +6,11 @@ jobs:
     steps:
     - name: checkout repo
       uses: actions/checkout@v4
+
     - name: list files
       run: ls -ltra
+
     - name: executing schell script
-      run: ./ascii-script.sh
+      run: |
+           chmod +x .github/ascii-script.sh
+           ./github/ascii-script.sh
