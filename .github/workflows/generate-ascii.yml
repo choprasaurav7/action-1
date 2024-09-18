@@ -1,18 +1,18 @@
 name: generate ascii art work
 on: push
-  jobs:
-    ascii_jobs: 
-      runs-on: ubuntu-latest
-      steps:
-      - name: checkout repo
-        uses: actions/checkout@v4
-      - name: install cowsay
-        run: sudo apt-get install cowsay -y
-      - name: Generate ASCII artwork
-        run: cowsay -f dragon "Run for cover.. I am a dragon" >> dragon.txt
-      - name: test cowsay file
-        run: grep -i 'dragon' dragon.txt
-      - name: read file
-        run: vi dragon.txt
-      - name: list repo file
-        run:  ls -ltra
+jobs:
+  ascii_jobs: 
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v4
+    - name: install cowsay
+      run: sudo apt-get install cowsay -y
+    - name: Generate ASCII artwork
+      run: cowsay -f dragon "Run for cover.. I am a dragon" >> dragon.txt
+    - name: test cowsay file
+      run: grep -i 'dragon' dragon.txt
+    - name: read file
+      run: vi dragon.txt
+    - name: list repo file
+      run:  ls -ltra
