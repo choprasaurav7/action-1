@@ -9,7 +9,7 @@ jobs:
     - name: List dir & view readme
       run: | 
         echo Welcome to the actions
-        ls
+        ls -ltra
         cat README.md
-    - name: Generate ASCII ast
+    - name: Generate ASCII artwork
       run: cowsay -f dragon "Run for cover.. I am a dragon" >> dragon.txt
